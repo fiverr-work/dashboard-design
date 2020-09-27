@@ -1,0 +1,57 @@
+#column {
+	.content .header {
+		padding: 16px 14px 10px !important;
+
+		h2 {
+			margin-bottom: 16px !important;
+			font-family: $font-bold;
+			font-size: $size-bold;
+
+			i {
+				color: $dark-grey !important;
+				margin-right: 5px;
+			}
+		}
+	}
+	.columns {
+		@include flex(space-between, flex-start);
+		margin-top: 6px;
+		.column{
+			width: 33%;
+
+			&:nth-child(1) {
+				.title {
+					background-color: $title-1;
+				}
+			}
+
+			&:nth-child(2) {
+				.title {
+					background-color: $title-2;
+				}
+			}
+
+			&:nth-child(3) {
+				.title {
+					background-color: $title-3;
+				}
+			}
+		}
+	}
+	.details {
+		.right {
+			.body {
+				&>div {
+					&:last-child {
+						h4 {
+							font-weight: 500;
+							font-size: 12px;
+							line-height: 14px;
+							font-family: $font-medium;
+						}
+					}
+				}
+			}
+		}
+	}
+}

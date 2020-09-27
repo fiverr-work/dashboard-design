@@ -1,0 +1,41 @@
+.side-bar {
+	position: fixed;
+	background-color: $dark-grey;
+	display: inline-block;
+	min-height: calc(100vh - 52px);
+	max-height: calc(100vh - 52px);
+	overflow-x: hidden;
+	overflow-y: auto;
+	z-index: 99;
+
+	ul {
+		display: flex;
+		flex-direction: column;
+
+		li {
+			a {
+				display: block;
+				padding: 12px 15px;
+				color: $white;
+
+				&:hover{
+					background-color: $semi-grey;
+					border-left: 3px solid $white;
+					padding-left: 12px;
+				}
+				&.active {
+					background-color: $primary;
+					border-left: 3px solid $white;
+					padding-left: 12px;
+				}
+
+				&.disactive {
+					background-color: $dark-grey;
+					border: none;
+					padding: 15px;
+					color: $light-grey;
+				}
+			}
+		}
+	}
+}

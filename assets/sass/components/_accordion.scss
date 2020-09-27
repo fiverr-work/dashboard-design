@@ -1,0 +1,29 @@
+.accordion{
+	.card{
+		border: none;
+		border-bottom: 1px solid $light-border;
+		border-radius: 0;
+		.card-header{
+			background-color: $white;
+			padding: 0;
+			border-radius: 0;
+			button{
+				@include flex(space-between, center);
+				border: none;
+				background-color: $white;
+				width: 100%;
+				padding: 16px;
+				*:not(i){
+					color: $dark-blue;
+					text-transform: uppercase;
+				}
+				div{
+					i{
+						margin-right: 5px;
+						color: $dark-grey;
+					}
+				}
+			}
+		}
+	}
+}

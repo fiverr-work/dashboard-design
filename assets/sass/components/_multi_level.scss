@@ -1,0 +1,141 @@
+%left-bar {
+	&::before {
+		content: '';
+		width: 4px;
+		height: 34px;
+		background-color: $dark-blue;
+		position: absolute;
+		left: 0;
+		top: 0;
+		transition: .3s;
+	}
+}
+
+.item input:checked~ul {
+	display: block;
+}
+
+.arrow {
+	float: left;
+	z-index: 0;
+	margin: 7px 1em 0 0;
+}
+
+.item input+.arrow {
+	transform: rotate(-90deg);
+	transition: .3s;
+}
+
+.item input:checked {
+	&+.arrow {
+		transform: rotate(0deg);
+		transition: .3s;
+	}
+}
+
+label:hover {
+	cursor: pointer;
+}
+
+label {
+	width: 100%;
+	display: block;
+	z-index: 3;
+	position: relative;
+	padding: 0 !important;
+}
+
+.multi-level {
+	width: 100%;
+	overflow-x: hidden;
+	padding: 10px 0 !important;
+
+	input[type="checkbox"] {
+		display: none;
+	}
+}
+
+.multi-level ul,
+.multi-level li,
+label {
+	font-weight: normal;
+	font-size: $size-regular;
+	line-height: 18px;
+	margin: 0 !important;
+	padding: 0 2em;
+	list-style: none;
+	text-decoration: none;
+	color: $dark-grey;
+	width: 100%;
+}
+
+.item {
+	&>label {
+		padding: 8px 0 !important;
+		transition: .3s;
+		position: relative;
+
+		&:hover {
+			@extend %left-bar;
+			background-color: $hover-bg;
+			transition: .3s;
+			padding-left: 20px;
+		}
+	}
+
+	ul {
+		display: none;
+		padding: 0;
+
+		li {
+			padding-top: 8px;
+			padding-bottom: 8px;
+			padding-right: 0px;
+			transition: .3s;
+			position: relative;
+
+			&.selected {
+				transition: .3s;
+				background-color: $light-blue;
+				@extend %left-bar;
+
+				label {
+					font-weight: 500;
+					font-size: $size-regular;
+					line-height: 18px;
+					font-family: $font-medium;
+					color: $dark-blue !important;
+				}
+
+				i {
+					color: $dark-blue !important;
+				}
+
+				svg path {
+					fill: $dark-blue;
+				}
+			}
+
+			&:hover:not(.selected):not(.link) {
+				transition: .3s;
+				background-color: $hover-bg;
+				@extend %left-bar;
+			}
+
+			a {
+				margin: 0;
+				color: $dark-grey;
+				font-family: $font-regular;
+				font-size: $size-regular;
+				line-height: 18px;
+			}
+		}
+	}
+}
+
+.item,
+.item label {
+	font-family: $font-regular;
+	font-size: $size-regular;
+	line-height: 18px;
+}

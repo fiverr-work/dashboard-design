@@ -1,0 +1,21 @@
+.btn-primary{
+	background-color: $dark-blue!important;
+	display: inline-block;
+	color: $white;
+	text-transform: uppercase;
+	padding: 9px 13px;
+	border-radius: 4px;
+	transition: background 500ms ease-out;
+
+	&:hover{
+		background-color: $folder !important;
+		transition: background 500ms ease;
+	}
+	&:active{
+		transition: background 500ms ease;
+		background-color: $dark-blue !important;
+	}
+	&:focus{
+		box-shadow: none !important;
+	}
+}

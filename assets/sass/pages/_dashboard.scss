@@ -1,0 +1,254 @@
+#dashboard {
+	.main-content {
+		&>.row {
+			margin: 3px;
+
+			& .row {
+				&>div {
+					padding: 0;
+
+					&>div {
+						background: $white;
+						border-radius: 8px;
+						margin: 5px;
+
+						&.header {
+							background-color: $primary;
+							padding: 24px 26px;
+
+							* {
+								color: $white;
+								background: none;
+							}
+
+							.head {
+								margin: 0 0 24px;
+
+								h2 {
+									@extend %size-bold;
+								}
+
+								i {
+									margin-right: 10px;
+									font-size: $size-bold;
+								}
+							}
+
+							.info {
+								@include flex(space-between, center);
+								margin: 0;
+
+								* {
+									@extend %size-regular;
+								}
+							}
+
+							p {
+								@extend %size-small;
+							}
+
+							img {
+								margin-left: auto;
+								display: block;
+							}
+						}
+
+						&.columns {
+							@include flex(space-between, center);
+							flex-direction: column;
+							background: none;
+
+							.column {
+								width: 100%;
+								border-radius: 8px;
+								overflow: hidden;
+
+								li {
+									margin-bottom: 3px;
+
+									&:first-child {
+										a {
+											color: $dark-grey !important;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.cards-small {
+				&>div:nth-child(1) {
+					&>div {
+						background: none;
+						padding: 8px 0;
+						margin-top: 10px;
+						@include flex(flex-start, center);
+
+						i {
+							margin-right: .5rem;
+						}
+
+						h3 {
+							margin: 0;
+							@extend %size-medium;
+							font-family: $font-bold;
+						}
+					}
+				}
+
+				&>div:not(:nth-child(1)) {
+					&>div {
+						padding: 10px 13px;
+						margin-top: 10px;
+
+						&.dropdown {
+							border: 1px solid $dark-border;
+							padding: 0;
+
+							.dropdown-toggle {
+								@include flex(space-between, center);
+								color: $dark-grey;
+								padding: 10px 13px;
+							}
+
+							.dropdown-menu {
+								transform: none !important;
+								border: none !important;
+								left: 0;
+								right: 0;
+								box-shadow: $shadow-sm;
+							}
+						}
+					}
+				}
+			}
+
+			.cards-medium {
+				.card-medium {
+					display: flex;
+					flex-direction: column;
+					padding: 40px 25px;
+				}
+
+				span.circle {
+					border-radius: 50%;
+					width: 40px;
+					height: 40px;
+					@include flex(flex-start, center);
+
+					i {
+						font-size: $size-medium;
+					}
+				}
+
+				p {
+					margin: 0;
+					@extend %size-small;
+					font-family: $font-regular;
+					color: $text-grey;
+				}
+
+				h3 {
+					margin: 0;
+					@extend %size-bold;
+					font-family: $font-bold;
+				}
+			}
+
+			.cards-big {
+				&>div {
+					&>div {
+						padding: 15px;
+						min-height: 95.5%;
+
+						label {
+							@extend %size-small;
+							margin-top: 17px !important;
+						}
+
+						&>div:first-child {
+							margin-bottom: 39px;
+
+							p {
+								font-family: $font-bold;
+							}
+						}
+
+						#map {
+							#map_inner>div:not(#tt_sm_map) {
+								visibility: hidden !important;
+							}
+						}
+
+						&>div:last-child {
+							&>div:first-child {
+								p {
+									@extend %size-bold;
+									font-family: $font-bold;
+								}
+							}
+
+							&>div {
+
+								&.circles {
+									@include flex(space-around, center);
+									margin: 15px auto;
+
+									&>span {
+										@include flex(center, center);
+										border-radius: 50%;
+										color: $white;
+										@extend %size-bold;
+										font-family: $font-bold;
+
+										&:nth-child(1) {
+											width: 88px;
+											height: 88px;
+										}
+
+										&:nth-child(2) {
+											width: 54px;
+											height: 54px;
+										}
+
+										&:nth-child(3) {
+											width: 45px;
+											height: 45px;
+										}
+
+										&:nth-child(4) {
+											width: 40px;
+											height: 40px;
+										}
+									}
+								}
+
+								&.labels {
+									@include flex(space-between, center);
+									width: 100%;
+									padding: 0 15px;
+
+									&>div {
+										display: flex;
+										flex-direction: column;
+										margin-top: 10px;
+
+										span {
+											@extend %size-smaller;
+											margin-bottom: 10px;
+											i {
+												font-size: $size-regular;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

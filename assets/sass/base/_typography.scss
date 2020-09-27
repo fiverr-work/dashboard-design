@@ -1,0 +1,117 @@
+@font-face {
+	font-family: 'Objective';
+	src: url('../fonts/Objective/Objective.eot?our09l');
+	src: url('../fonts/Objective/Objective.eot?our09l#iefix') format('embedded-opentype'),
+		url('../fonts/Objective/Objective.ttf?our09l') format('truetype'),
+		url('../fonts/Objective/Objective.woff?our09l') format('woff'),
+		url('../fonts/Objective/Objective.svg?our09l#Objective') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto-Regular";
+	src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Roboto-Medium";
+	src: url('../fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Roboto-Light";
+	src: url('../fonts/Roboto/Roboto-Light.ttf') format('truetype');
+}
+
+body {
+	font-family: $font-medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: $size-small;
+	line-height: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	display: block;
+	color: $dark-grey;
+}
+
+h3 {
+	font-weight: 500;
+	font-size: $size-regular;
+	line-height: 18px;
+}
+
+p {
+	font-family: $font-regular;
+	font-size: $size-regular;
+	line-height: 17px;
+	color: $dark-grey;
+}
+
+a {
+	font-weight: 500;
+	color: $dark-blue;
+}
+
+label {
+	font-size: 11px;
+	line-height: 18px;
+	font-weight: 500;
+	color: $text-grey;
+	display: block;
+}
+
+%size-smaller {
+	font-size: $size-smaller;
+	line-height: 14px;
+
+	@include for-size(big-desktop-up) {
+		font-size: $size-small !important;
+	}
+}
+
+%size-small {
+	font-size: $size-small;
+	line-height: 14px;
+
+	@include for-size(big-desktop-up) {
+		font-size: $size-regular;
+	}
+}
+
+%size-regular {
+	font-size: $size-regular;
+	line-height: 14px;
+
+	@include for-size(big-desktop-up) {
+		font-size: $size-medium;
+		line-height: 18px;
+	}
+}
+
+%size-medium {
+	font-size: $size-medium;
+	line-height: 14px;
+
+	@include for-size(big-desktop-up) {
+		font-size: $size-bold;
+		line-height: 18px;
+	}
+}
+
+%size-bold {
+	font-size: $size-bold;
+	line-height: 18px;
+
+	@include for-size(big-desktop-up) {
+		font-size: $size-bolder;
+		line-height: 24px;
+	}
+}

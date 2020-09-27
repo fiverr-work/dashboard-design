@@ -1,0 +1,223 @@
+#editor {
+	padding-top: 52px !important;
+
+	.main-nav-pills {
+		margin-left: 46.19px;
+
+		&>.nav-pills {
+			margin-bottom: 0 !important;
+			background-color: $white;
+			z-index: 3;
+			top: 52px;
+			position: sticky;
+			padding: 0 18px;
+
+			li {
+				.nav-link {
+					background: none;
+					border-radius: 0;
+					padding: 15px 5px !important;
+					text-transform: uppercase;
+					margin-right: 10px;
+
+					&.active,
+					&:hover {
+						padding-bottom: 11px !important;
+						border-bottom: 4px solid $dark-blue;
+						color: $dark-grey;
+					}
+				}
+			}
+		}
+
+		.main-content {
+			margin: 0 !important;
+			position: sticky;
+			top: 100px;
+
+			.details {
+				z-index: 2;
+				top: 100px;
+				min-height: calc(100vh - 100px);
+				max-height: calc(100vh - 100px);
+
+				&.right {
+					.nav-item {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.content {
+				margin: 0;
+
+				.header {
+					z-index: 2;
+					position: sticky;
+					top: 100px;
+					padding: 0;
+
+					i {
+						font-size: $size-medium;
+					}
+
+					&>div {
+						@include flex(space-between, center);
+						padding: 10px 13px;
+						border-top: 1px solid $dark-border;
+						border-bottom: 1px solid $dark-border;
+					}
+
+					&__top {
+						h2 {
+							margin: 0;
+							font-size: $size-regular;
+							font-family: $font-medium;
+						}
+					}
+
+					&__bottom {
+						border-top: none !important;
+
+						& * {
+							color: $dark-grey !important;
+						}
+
+						ul {
+							@include flex(flex-start, center);
+							margin: 0;
+
+							&>*:not(:last-child) {
+								margin-right: 17px;
+							}
+
+							.dropdown-menu {
+								top: 10px !important;
+							}
+
+							li {
+								&:first-child {
+									.dropdown-menu {
+										top: 3px !important;
+									}
+
+									.dropdown-toggle {
+										background-color: $body-bg;
+										padding: 8px 6px;
+										text-transform: uppercase;
+										border-radius: 4px;
+
+										&:hover {
+											background-color: $light-blue;
+											transition: background 400ms ease-out;
+										}
+									}
+								}
+							}
+
+							.divider {
+								width: 1px;
+								height: 20px;
+								background-color: $dark-border;
+							}
+						}
+					}
+				}
+
+				.body {
+					margin: 6px 10px;
+
+					.card {
+						border: 2px solid $body-bg;
+						border-radius: 8px;
+						padding: 16px 12px;
+						background-color: $white;
+
+						&__content {
+							border-left: $card-content-border;
+							padding-left: 13px;
+
+							&__head {
+								@include flex(space-between, center);
+								margin-bottom: 10px;
+
+								&>div {
+									@include flex(space-between, center);
+
+									.title {
+										margin-right: 16px;
+										color: $text-grey;
+										font-weight: 500;
+										letter-spacing: 0.215385px;
+									}
+
+									&>span {
+										color: $text-grey;
+										font-weight: 500;
+										letter-spacing: 0.215385px;
+										margin-right: 3px;
+									}
+
+									&>* {
+										margin: 0;
+										font-size: $size-small;
+
+									}
+
+									&>a>.icon {
+										color: $dark-grey !important;
+										margin-right: 2px;
+									}
+								}
+							}
+
+							&__body {
+								p {
+									margin: 0;
+									letter-spacing: 0.215385px;
+									font-size: $size-regular;
+								}
+							}
+						}
+
+						&.selected {
+							background-color: $light-blue;
+							transform: translateX(-2px);
+							border-left: 3px solid $dark-blue;
+
+							.card__content {
+								border: none;
+
+								&__head {
+									&>div {
+										&>a i.icon {
+											color: $dark-blue !important;
+										}
+
+										.title {
+											color: $dark-blue;
+										}
+									}
+								}
+
+								.icon.invisible {
+									visibility: visible !important;
+								}
+							}
+						}
+
+						&:hover {
+							background-color: $light-blue;
+							cursor: pointer;
+							transition: background 400ms ease-out;
+
+							.icon.invisible {
+								visibility: visible !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

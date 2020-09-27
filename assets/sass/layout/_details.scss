@@ -1,0 +1,178 @@
+.details {
+	position: sticky;
+	top: 52px;
+	right: 0;
+	background-color: $white;
+	max-height: calc(100vh - 52px);
+	min-height: calc(100vh - 52px);
+	max-width: 290px;
+	min-width: 290px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	flex: 1;
+
+	.header {
+		padding: 14px 16px;
+		background-color: $primary;
+
+		h2 {
+			color: $white;
+			text-transform: uppercase;
+			font-family: $font-regular;
+			line-height: 14px;
+			font-size: $size-small;
+			margin: 0;
+
+			i {
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.body {
+		&>div {
+			border-top: 1px solid $light-border;
+			padding: 16px;
+
+			&.objects {
+				line-height: 18px;
+				font-weight: 500;
+
+				label {
+					@extend %size-smaller;
+					color: $text-grey;
+					margin-bottom: 10px !important;
+				}
+
+				span {
+					font-size: $size-small;
+
+					i {
+						margin-right: 8px;
+					}
+				}
+			}
+
+			.details-list {
+				display: block !important;
+				border: none !important;
+
+				li {
+					margin-bottom: 16px;
+
+					span {
+						color: $dark-grey;
+						font-weight: 500;
+						font-size: $size-small !important;
+						font-family: $font-medium;
+						line-height: 16px;
+						display: inline-block !important;
+						margin-bottom: 0 !important;
+
+						&:first-child {
+							margin-right: 17px;
+						}
+
+						&:last-child {
+							&.light {
+								font-family: $font-regular;
+							}
+						}
+					}
+				}
+			}
+
+			&.participants {
+				padding: 0;
+
+				.title {
+					border-bottom: 1px solid $light-border;
+					padding-top: 10px;
+					padding-bottom: 10px;
+
+					h4 {
+						font-size: $size-small;
+						font-family: $font-medium;
+						text-transform: uppercase;
+						padding-bottom: 5px;
+						margin: 0 16px 0;
+						border-bottom: 4px solid $primary;
+						display: inline-block;
+					}
+				}
+
+				ul {
+					margin: 0;
+
+					li {
+						border-bottom: 1px solid $light-border;
+						padding-top: 10px;
+						padding-bottom: 10px;
+
+						p,
+						div {
+							margin-bottom: 0;
+							padding-left: 16px;
+							padding-right: 16px;
+							font-size: $size-small !important;
+						}
+					}
+				}
+			}
+		}
+
+		.details-nav-pills {
+			padding: 0;
+
+			ul {
+				border-bottom: 1px solid $light-border;
+				padding-left: 16px;
+				padding-right: 16px;
+				@include flex(start, center);
+
+				.nav-item {
+					&:not(:last-child) {
+						margin-right: 1rem;
+					}
+				}
+
+				.nav-link {
+					background: none;
+					color: $dark-blue;
+					padding: 13px 0;
+					border-radius: 0;
+					text-transform: uppercase;
+					font-weight: 500;
+					font-size: $size-small;
+					line-height: 14px;
+
+					&.active {
+						color: $dark-grey;
+						border-bottom: 4px solid $dark-blue;
+						padding-bottom: 9px;
+					}
+				}
+			}
+
+			.tab-pane {
+				padding-left: 16px;
+				padding-right: 16px;
+				margin: 25px auto;
+
+				span {
+					font-size: $size-regular;
+					font-weight: 500;
+					line-height: 16px;
+					margin-bottom: 17px;
+					display: block;
+				}
+
+				p {
+					font-size: $size-regular;
+					line-height: 17px;
+					font-family: "Roboto-Regular";
+				}
+			}
+		}
+	}
+}

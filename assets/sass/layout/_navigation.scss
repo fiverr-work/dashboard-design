@@ -1,0 +1,43 @@
+.navbar {
+	padding: 5px 16px;
+	border-top: 4px solid $primary;
+	background-color: $dark-grey;
+
+	input {
+		font-family: 'Objective';
+		font-style: normal;
+		font-weight: normal;
+		font-size: $size-small;
+		line-height: 16px;
+		width: 188px;
+	}
+
+	.input-group {
+		display: flex;
+		align-items: center;
+		width: 600px;
+		margin-left: -60px;
+		padding: 0 11px;
+		border-radius: 4px;
+		background-color: $semi-grey;
+
+		.search-field {
+			background: none;
+			border: none;
+			font-family: $font-medium;
+			font-style: normal;
+			font-weight: 500;
+			font-size: $size-small;
+			line-height: 14px;
+			color: $input-text;
+
+			&::placeholder {
+				color: $input-text;
+			}
+
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
+}
